@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# read the message, as per https://stackoverflow.com/a/48285071
+message=$(cat "${1:?Missing commit message file}")
+
+$PWD/OpinionatedCommitMessage.ps1 -message "$message" -allowOneLiners "$true"
